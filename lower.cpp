@@ -32,7 +32,7 @@ std::string lower(int height) {
 
 	std::string return_string = "\n";
 
-	std::cout << "Slice:" << "\n";
+	std::cout << "Shape:" << "\n";
 
 	for (int i=1; i< height+1;i++) {
 		return_string = return_string + lower_slice(i, height) + "\n\n";

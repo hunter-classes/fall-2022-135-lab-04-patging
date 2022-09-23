@@ -31,7 +31,7 @@ std::string upper(int height) {
 
 	std::string return_string = "\n";
 
-	std::cout << "Slice:" << "\n";
+	std::cout << "Shape:" << "\n";
 
 	for (int i=height; i>0;i--) {
 		return_string = return_string + upper_slice(i, height) + "\n\n";
