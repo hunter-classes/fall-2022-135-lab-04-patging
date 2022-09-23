@@ -1,3 +1,11 @@
+/*
+Author: Patrick Ging
+Course: CSCI-135
+Instructor: Professor Zamanksy
+Assignment: Lab 4
+
+Upper.cpp. Has methods to draw a right triangle rotated 270 degrees
+*/
 
 #include <iostream>
 
@@ -18,7 +26,7 @@ std::string upper_slice(int num_stars, int max_len) {
 	return return_string;
 }
 
-void upper(int height) {
+std::string upper(int height) {
 	// prints a right triangle of height height
 
 	std::string return_string = "\n";
@@ -29,6 +37,6 @@ void upper(int height) {
 		return_string = return_string + upper_slice(i, height) + "\n\n";
 	}
 
-	std::cout << return_string;
+	return return_string;
 
 }

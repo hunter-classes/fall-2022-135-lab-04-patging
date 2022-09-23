@@ -1,10 +1,17 @@
+/*
+Author: Patrick Ging
+Course: CSCI-135
+Instructor: Professor Zamanksy
+Assignment: Lab 4
+
+Box.cpp contrains box() drawing method
+*/
+
 #include <iostream>
 
-void box(int width, int height) {
+std::string box(int width, int height) {
 
-	std::cout << "Shape:" << "\n";
-
-	std::string output_string;
+	std::string output_string = "Shape:\n";;
 	std::string stack; // individual slices
 
 	for(int i=0; i<width;i++) {
@@ -15,6 +22,6 @@ void box(int width, int height) {
 		output_string = output_string + stack + "\n";
 	}
 
-	std::cout << output_string;
+	return output_string;
 
 }

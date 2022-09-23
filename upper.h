@@ -1,3 +1,3 @@
 #pragma once 
 
-void upper(int height);
+std::string upper(int height);

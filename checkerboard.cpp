@@ -1,6 +1,13 @@
+/*
+Author: Patrick Ging
+Course: CSCI-135
+Instructor: Professor Zamanksy
+Assignment: Lab 4
+
+Checkerboard.cpp. Has method for drawing a checkerboard
+*/
+
 #include <iostream>
-
-
 
 std::string larger(int length) {
 	// generates the longer of the two slices
@@ -26,13 +33,10 @@ std::string shorter(int length) {
 	return st;
 }
 
-void checkerboard(int width, int height) {
+std::string checkerboard(int width, int height) {
 
 
-	std::cout << "Shape:" << "\n";
-
-
-	std::string return_string; // string to have concatenation and return 
+	std::string return_string = "Shape:\n"; // string to have concatenation and return 
 
 	std::string l = larger(width);
 	std::string s = shorter(width-1);
@@ -47,7 +51,7 @@ void checkerboard(int width, int height) {
 
 	}
 
-	std::cout << return_string << std::endl;
+	return return_string;
 
 }
 

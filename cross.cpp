@@ -1,3 +1,11 @@
+/*
+Author: Patrick Ging
+Course: CSCI-135
+Instructor: Professor Zamanksy
+Assignment: Lab 4
+
+Cross.cpp. Contains methods for drawing an X of a particualr heigtht, cross(int)*/
+
 #include <iostream>
 
 
@@ -19,9 +27,11 @@ std::string slice(int spacing, int length) {
 
 	int current_spacing = 0;
 
-	for(int i=1;i<length+1;i++) {
+	int positions = length - spacing;
 
-		if (i ==  || i == (length - spacing) + (spacing)) {
+	for(int i=0;i<length;i++) {
+
+		if (i + 1 == ((length - spacing) / 2) || (i + 1 == ((length - spacing) / 2 + spacing + 1)) )  {
 			return_string = return_string + "*";
 		} else {
 			return_string = return_string + " ";
@@ -33,34 +43,25 @@ std::string slice(int spacing, int length) {
 
 }
 
-void cross(int height) {
+std::string cross(int height) {
 
-	std::string return_string; // init canvas
+	std::string return_string = "Shape:\n"; // init canvas
 
 	// presuming that height % 2 == 0
 
-	for (int i =height/2; i > 0;i--) {
 
-		return_string = return_string + slice(i*2, height) + "\n";
+	for (int i = height/2; i > 0;i--) {
+
+		return_string = return_string + slice(i*2 - 2, height) + "\n";
 		return_string = return_string + "\n";
 	}
 
-	for (int i = 0; i<height/2 ;i++) {
-		return_string = return_string + slice(i*2, height) + "\n";
+	for (int i = 1; i<height/2 +1 ;i++) {
+		return_string = return_string + slice(i*2 - 2, height) + "\n";
 		return_string = return_string + "\n";
 	}
 
 
 
-	std::cout << return_string << std::endl;
-
-}
-
-
-
-int main() {
-
-	cross(8);
-
-	return 0;
+	return return_string;
 }

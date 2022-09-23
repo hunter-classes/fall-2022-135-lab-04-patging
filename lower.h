@@ -1,3 +1,3 @@
 #pragma once
 
-void lower(int height);
+std::string lower(int height);

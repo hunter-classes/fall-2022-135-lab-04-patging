@@ -1,3 +1,11 @@
+/*
+Author: Patrick Ging
+Course: CSCI-135
+Instructor: Professor Zamanksy
+Assignment: Lab 4
+
+Lower.cpp. Has method to draw right triangle
+*/
 
 
 #include <iostream>
@@ -19,7 +27,7 @@ std::string lower_slice(int num_stars, int max_len) {
 	return return_string;
 }
 
-void lower(int height) {
+std::string lower(int height) {
 	// prints a right triangle of height height
 
 	std::string return_string = "\n";
@@ -30,7 +38,7 @@ void lower(int height) {
 		return_string = return_string + lower_slice(i, height) + "\n\n";
 	}
 
-	std::cout << return_string;
+	return return_string;
 
 }
 

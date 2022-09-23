@@ -1,4 +1,4 @@
 #pragma once
 
 
-void box(int width, int height);
+std::string box(int width, int height);
